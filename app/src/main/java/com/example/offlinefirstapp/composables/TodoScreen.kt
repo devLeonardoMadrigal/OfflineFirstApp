@@ -59,6 +59,11 @@ fun TodoScreen(viewModel: TodoViewModel = hiltViewModel()) {
                                 viewModel.updateCompletedStatus(item, newStatus = isChecked)
                             },
                         )
+                        Button(onClick = {
+                            viewModel.deleteItem(item)
+                        }) {
+                            Text("Delete")
+                        }
 
                     }
                 }
